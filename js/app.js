@@ -19,7 +19,7 @@ window.addEventListener("load", function() {
       if (counter > 3) counter = 1;
       wrapper.classList.add("color" + counter);
       wrapper.classList.toggle(!wrapper.classList.contains("color1"));
-    }, 1000);
+    }, 5000);
   });
 
 const stopColorChange = () => {
