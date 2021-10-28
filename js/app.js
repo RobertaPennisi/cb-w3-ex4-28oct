@@ -9,8 +9,7 @@ function getNumbers() {
 }
 getNumbers()
 
-
-window.addEventListener("load", function() {
+function changeColor() {
     const wrapper = document.querySelector('.wrapper');
     let counter = 1;
     setInterval(function() {
@@ -19,12 +18,14 @@ window.addEventListener("load", function() {
       if (counter > 3) counter = 1;
       wrapper.classList.add("color" + counter);
       wrapper.classList.toggle(!wrapper.classList.contains("color1"));
-    }, 5000);
-  });
+    }, 1000);
+  }
 
-const stopColorChange = () => {
-    window.removeEventListener("keypress", "Enter");
-}
+document.body.addEventListener("load", changeColor());
+
+//document.body.removeEventListener("keypress", changeColor)
+
+
 
 
 
